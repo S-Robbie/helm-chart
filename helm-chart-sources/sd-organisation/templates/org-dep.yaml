@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-org-dep
+  labels:
+    app: service-director
+    cloud: azure
+    {{- include "org.labels" . | nindent 4}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: service-director
+      cloud: azure 
+      layer: organisation
+      {{- include "org.labels" . | nindent 6}}
+  template:
+    metadata:
+      labels:
+        app: service-director
+        cloud: azure
+        layer: organisation
+        {{- include "org.labels" . | nindent 8}}
+    spec:
+      containers:
+        - name: c1
+          image: robin2310/organisation-app:latest
+          env:
+            - name: DEVICE_NAME
+              value: {{ .Values.DEVICE_NAME }}
+            - name: EVENT_TYPE
+              value: {{ .Values.EVENT_TYPE | quote}}
