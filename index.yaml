@@ -3,9 +3,9 @@ entries:
   helm-chart-test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-07-26T10:36:40.870071602+02:00"
+    created: "2020-07-30T14:00:26.370413882+02:00"
     description: A Helm chart for Kubernetes
-    digest: 55021bf5f58f8d2bdcc77f70158771a38a8e3bfabf2868c083bf0157ffde1636
+    digest: 47c0004474c2f7128ce82bee24c59d1ee3762d0b49dcdc54d320cd8324a9d2bf
     name: helm-chart-test
     type: application
     urls:
@@ -14,11 +14,11 @@ entries:
   sd-organisation:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2020-07-26T10:36:40.870504329+02:00"
+    created: "2020-07-30T14:00:26.371228659+02:00"
     description: A Helm chart for sd organisation
-    digest: dcd898c7c2403f88ca0f3887653ef4fabb4ee8ae7d0b4e4f54556af20e9ee596
+    digest: 54bf04fb23a5b6ff68af23e87fd01633c36263ceefbd3e95c644e4c8d6f884ca
     name: sd-organisation
     urls:
     - https://s-robbie.github.io/helm-chart/sd-organisation-0.1.0.tgz
     version: 0.1.0
-generated: "2020-07-26T10:36:40.868946057+02:00"
+generated: "2020-07-30T14:00:26.368027804+02:00"

@@ -1,2 +1,2 @@
-DEVICE_NAME : Meraki
-EVENT_TYPE: "1"
+SITE_NAME : Meraki
+ORG_PORT: "8000"

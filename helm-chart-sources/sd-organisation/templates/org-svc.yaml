@@ -6,8 +6,10 @@ metadata:
     app: service-director
     cloud: azure
     {{- include "org.labels" . | nindent 4}}
+  annotations:
+    service.beta.kubernetes.io/azure-dns-label-name: {{ .Release.Name }}
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: service-director
     cloud: azure
@@ -16,6 +18,5 @@ spec:
   ports:
     - name: org 
       port: 5000
-      nodePort: 30010
   sessionAffinity: ClientIP      
 

@@ -24,9 +24,9 @@ spec:
     spec:
       containers:
         - name: c1
-          image: robin2310/organisation-app:latest
+          image: robin2310/organisation-app:1.0
           env:
-            - name: DEVICE_NAME
-              value: {{ .Values.DEVICE_NAME }}
-            - name: EVENT_TYPE
-              value: {{ .Values.EVENT_TYPE | quote}}
+            - name: SITE_NAME
+              value: {{ .Values.SITE_NAME }}
+            - name: ORG_PORT
+              value: {{ .Values.ORG_PORT | quote}}
