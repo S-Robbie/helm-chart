@@ -30,3 +30,5 @@ spec:
               value: {{ .Values.SITE_NAME }}
             - name: ORG_PORT
               value: {{ .Values.ORG_PORT | quote}}
+            - name: SITE_PORT
+              value: {{ .Values.SITE_PORT | quote}}

@@ -7,7 +7,7 @@ metadata:
     cloud: azure
     {{- include "org.labels" . | nindent 4}}
   annotations:
-    service.beta.kubernetes.io/azure-dns-label-name: {{ .Release.Name }}
+    service.beta.kubernetes.io/azure-dns-label-name: mysite
 spec:
   type: LoadBalancer
   selector:
@@ -16,7 +16,7 @@ spec:
     layer: organisation
     {{- include "org.labels" . | nindent 4}}
   ports:
-    - name: org 
-      port: 5000
+    - name: site 
+      port: {{ .Values.SITE_PORT | quote}}
   sessionAffinity: ClientIP      
 
