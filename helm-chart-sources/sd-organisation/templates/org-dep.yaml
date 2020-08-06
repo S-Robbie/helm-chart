@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: c1
-          image: robin2310/organisation-app:1.0
+          image: robin2310/organisation-app:latest
           env:
             - name: SITE_NAME
               value: {{ .Values.SITE_NAME }}
