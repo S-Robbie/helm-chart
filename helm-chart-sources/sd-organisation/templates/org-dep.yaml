@@ -32,3 +32,8 @@ spec:
               value: {{ .Values.ORG_PORT | quote}}
             - name: SITE_PORT
               value: {{ .Values.SITE_PORT | quote}}
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.SITE_PORT | quote}}
+            initialDelaySeconds: 15
