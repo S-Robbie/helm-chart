@@ -35,5 +35,5 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: {{ .Values.SITE_PORT | quote}}
+              port: 6000
             initialDelaySeconds: 15
